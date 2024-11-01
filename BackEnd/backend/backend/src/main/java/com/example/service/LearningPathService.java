@@ -1,8 +1,8 @@
 // src/main/java/com/example/service/LearningPathService.java
 package com.example.service;
 
-import com.example.model.LearningPath;
-import com.example.repository.LearningPathRepository;
+import com.example.backend.model.LearningPath;
+import com.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public class LearningPathService {
 
     @Autowired
-    private LearningPathRepository learningPathRepository;
+    private UserRepository learningPathRepository;
 
     public List<LearningPath> getAllLearningPathsForUser(Long userId) {
         return learningPathRepository.findByUserId(userId);
